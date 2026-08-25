@@ -1,0 +1,284 @@
+{% extends "base.html" %}
+
+{% block title %}
+CA INDIA | Pratap Akhand and Associates
+{% endblock %}
+
+
+{% block content %}
+
+<!-- =========================================
+     HERO SECTION
+     ========================================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <p class="hero-small">
+            PROFESSIONAL CHARTERED ACCOUNTANCY SERVICES
+        </p>
+
+        <h1>
+            Trusted Financial Guidance.
+            <span>Professional Excellence.</span>
+        </h1>
+
+        <p class="hero-description">
+
+            Welcome to CA INDIA – Pratap Akhand and Associates,
+            providing professional accounting, taxation, auditing,
+            GST and financial advisory services with a focus on
+            accuracy, transparency and long-term client relationships.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a href="{{ url_for('services') }}"
+               class="primary-button">
+                Explore Our Services
+            </a>
+
+            <a href="{{ url_for('contact') }}"
+               class="secondary-button">
+                Contact Us
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     PROFESSIONAL INTRODUCTION
+     ========================================= -->
+
+<section class="section">
+
+    <div class="section-heading">
+
+        <p class="section-label">
+            ABOUT THE FIRM
+        </p>
+
+        <h2>
+            Professional Support for Your
+            Financial Journey
+        </h2>
+
+    </div>
+
+
+    <div class="about-preview">
+
+        <div>
+
+            <h3>
+                CA Akhand Pratap Maurya
+            </h3>
+
+            <p class="qualification">
+                B.Com, ACA
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <p>
+
+                CA Akhand Pratap Maurya is a qualified
+                Chartered Accountant committed to providing
+                reliable and professional financial services
+                to individuals, businesses and organizations.
+
+                With an approach centered around accuracy,
+                confidentiality, transparency and practical
+                financial guidance, the firm aims to help
+                clients manage their accounting, taxation,
+                compliance and financial requirements with
+                greater confidence.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     SERVICES PREVIEW
+     ========================================= -->
+
+<section class="section services-section">
+
+    <div class="section-heading">
+
+        <p class="section-label">
+            OUR SERVICES
+        </p>
+
+        <h2>
+            Professional Services Designed
+            Around Your Needs
+        </h2>
+
+        <p>
+            Explore our range of accounting, taxation,
+            compliance and financial advisory services.
+        </p>
+
+    </div>
+
+
+    <div class="service-grid">
+
+
+        <div class="service-card">
+
+            <div class="service-number">
+                01
+            </div>
+
+            <h3>
+                Income Tax
+            </h3>
+
+            <p>
+                Income tax return preparation,
+                tax planning and related assistance.
+            </p>
+
+            <a href="{{ url_for('income_tax') }}">
+                Learn More →
+            </a>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-number">
+                02
+            </div>
+
+            <h3>
+                GST Services
+            </h3>
+
+            <p>
+                GST registration, returns and
+                compliance support.
+            </p>
+
+            <a href="{{ url_for('gst') }}">
+                Learn More →
+            </a>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-number">
+                03
+            </div>
+
+            <h3>
+                Accounting
+            </h3>
+
+            <p>
+                Professional accounting and
+                financial record management.
+            </p>
+
+            <a href="{{ url_for('accounting') }}">
+                Learn More →
+            </a>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-number">
+                04
+            </div>
+
+            <h3>
+                Audit
+            </h3>
+
+            <p>
+                Professional audit and
+                financial examination services.
+            </p>
+
+            <a href="{{ url_for('audit') }}">
+                Learn More →
+            </a>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-number">
+                05
+            </div>
+
+            <h3>
+                Financial Advisory
+            </h3>
+
+            <p>
+                Practical financial guidance
+                for better decision making.
+            </p>
+
+            <a href="{{ url_for('financial_advisory') }}">
+                Learn More →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     CALL TO ACTION
+     ========================================= -->
+
+<section class="cta">
+
+    <div>
+
+        <h2>
+            Let's Discuss Your Financial Needs
+        </h2>
+
+        <p>
+            Get in touch with CA INDIA for
+            professional assistance.
+        </p>
+
+    </div>
+
+    <a href="{{ url_for('contact') }}"
+       class="primary-button">
+        Get in Touch
+    </a>
+
+</section>
+
+{% endblock %}

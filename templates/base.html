@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {% block title %}
+        CA INDIA | Pratap Akhand and Associates
+        {% endblock %}
+    </title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<!-- =========================================
+     NAVIGATION BAR
+     ========================================= -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="{{ url_for('home') }}"
+           class="brand">
+
+            <span class="brand-main">CA INDIA</span>
+
+            <span class="brand-sub">
+                Pratap Akhand and Associates
+            </span>
+
+        </a>
+
+
+        <nav class="navigation">
+
+            <a href="{{ url_for('home') }}">
+                Home
+            </a>
+
+            <a href="{{ url_for('about') }}">
+                About
+            </a>
+
+            <a href="{{ url_for('services') }}">
+                Services
+            </a>
+
+            <a href="{{ url_for('contact') }}"
+               class="nav-button">
+                Contact Us
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================
+     MAIN PAGE CONTENT
+     ========================================= -->
+
+<main>
+
+    {% block content %}
+
+    {% endblock %}
+
+</main>
+
+
+<!-- =========================================
+     FOOTER
+     ========================================= -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-column">
+
+            <h3>CA INDIA</h3>
+
+            <p>
+                Pratap Akhand and Associates
+            </p>
+
+            <p>
+                Professional Chartered Accountancy
+                and financial services.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <a href="{{ url_for('home') }}">
+                Home
+            </a>
+
+            <a href="{{ url_for('about') }}">
+                About
+            </a>
+
+            <a href="{{ url_for('services') }}">
+                Services
+            </a>
+
+            <a href="{{ url_for('contact') }}">
+                Contact
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Contact</h3>
+
+            <p>
+                Ludarsh Convent School,
+                Ghazipur
+            </p>
+
+            <p>
+                PIN - 233001
+            </p>
+
+            <a href="mailto:caakhandpratap1@gmail.com">
+                caakhandpratap1@gmail.com
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 CA INDIA | Pratap Akhand and Associates.
+        All Rights Reserved.
+
+    </div>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+
+{% block title %}
+Our Services | CA INDIA
+{% endblock %}
+
+
+{% block content %}
+
+<section class="page-hero">
+
+    <p class="section-label">
+        OUR SERVICES
+    </p>
+
+    <h1>
+        Professional Financial Services
+    </h1>
+
+    <p>
+        Reliable support for accounting,
+        taxation, compliance and financial needs.
+    </p>
+
+</section>
+
+
+<section class="section">
+
+    <div class="service-grid">
+
+
+        <div class="service-card">
+
+            <div class="service-number">01</div>
+
+            <h2>Income Tax Services</h2>
+
+            <p>
+                Assistance with income tax returns,
+                tax-related documentation and
+                tax planning requirements.
+            </p>
+
+            <a href="{{ url_for('income_tax') }}">
+                View Service →
+            </a>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-number">02</div>
+
+            <h2>GST Services</h2>
+
+            <p>
+                GST registration, return preparation
+                and GST compliance assistance.
+            </p>
+
+            <a href="{{ url_for('gst') }}">
+                View Service →
+            </a>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-number">03</div>
+
+            <h2>Accounting Services</h2>
+
+            <p>
+                Accounting and financial record
+                management support for businesses.
+            </p>
+
+            <a href="{{ url_for('accounting') }}">
+                View Service →
+            </a>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-number">04</div>
+
+            <h2>Audit Services</h2>
+
+            <p>
+                Professional audit and examination
+                of financial records.
+            </p>
+
+            <a href="{{ url_for('audit') }}">
+                View Service →
+            </a>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-number">05</div>
+
+            <h2>Financial Advisory</h2>
+
+            <p>
+                Professional financial guidance to
+                support better business decisions.
+            </p>
+
+            <a href="{{ url_for('financial_advisory') }}">
+                View Service →
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+{% endblock %}
