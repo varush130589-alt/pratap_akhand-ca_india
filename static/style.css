@@ -697,3 +697,103 @@ body {
     }
 
 }
+/* =========================================
+   LATEST NEWS
+   ========================================= */
+
+.news-section {
+    background: #ffffff;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.news-card {
+    background: #f7faff;
+    border: 1px solid #dce6f2;
+    border-radius: 12px;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: 0.3s;
+}
+
+.news-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(20, 70, 120, 0.10);
+}
+
+.news-category {
+    display: inline-block;
+    width: fit-content;
+
+    color: #0b63ce;
+    background: #eaf3ff;
+
+    padding: 5px 12px;
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+
+    margin-bottom: 15px;
+}
+
+.news-card h3 {
+    color: #102a43;
+    font-size: 21px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.news-date {
+    color: #8494a7;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.news-card p {
+    color: #65758b;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.news-link {
+    margin-top: auto;
+
+    color: #0b63ce;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.news-link:hover {
+    color: #084d9f;
+}
+
+
+/* =========================================
+   LATEST NEWS RESPONSIVE
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
