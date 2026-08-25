@@ -1,0 +1,699 @@
+/* =========================================
+   GLOBAL SETTINGS
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7faff;
+    color: #172b4d;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   NAVIGATION BAR
+   ========================================= */
+
+.navbar {
+    background: #ffffff;
+    border-bottom: 1px solid #dce6f2;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.brand {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.brand-main {
+    color: #0b3d91;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+
+.brand-sub {
+    color: #65758b;
+    font-size: 11px;
+}
+
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+
+.navigation a {
+    color: #263b5a;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+
+.navigation a:hover {
+    color: #0b63ce;
+}
+
+
+.nav-button {
+    background: #0b63ce;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eaf3ff,
+            #ffffff
+        );
+
+    padding: 80px 8%;
+}
+
+
+.hero-content {
+    max-width: 850px;
+}
+
+
+.hero-small {
+    color: #0b63ce;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 70px);
+    line-height: 1.1;
+    color: #102a43;
+    margin-bottom: 25px;
+}
+
+
+.hero h1 span {
+    color: #0b63ce;
+}
+
+
+.hero-description {
+    max-width: 720px;
+    font-size: 18px;
+    color: #526579;
+    margin-bottom: 35px;
+}
+
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+.primary-button,
+.secondary-button {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+
+.primary-button {
+    background: #0b63ce;
+    color: white;
+}
+
+
+.primary-button:hover {
+    background: #084d9f;
+    transform: translateY(-2px);
+}
+
+
+.secondary-button {
+    border: 2px solid #0b63ce;
+    color: #0b63ce;
+    background: white;
+}
+
+
+.secondary-button:hover {
+    background: #eaf3ff;
+}
+
+
+/* =========================================
+   GENERAL SECTIONS
+   ========================================= */
+
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 90px 25px;
+}
+
+
+.section-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 55px;
+}
+
+
+.section-label {
+    color: #0b63ce;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+
+.section-heading h2 {
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    color: #102a43;
+}
+
+
+.section-heading p {
+    color: #65758b;
+}
+
+
+/* =========================================
+   ABOUT PREVIEW
+   ========================================= */
+
+.about-preview {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+
+    background: white;
+    padding: 50px;
+
+    border: 1px solid #dce6f2;
+    border-radius: 12px;
+}
+
+
+.about-preview h3 {
+    font-size: 28px;
+    color: #102a43;
+}
+
+
+.qualification {
+    color: #0b63ce;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   SERVICES
+   ========================================= */
+
+.services-section {
+    max-width: none;
+    background: #eef5fc;
+}
+
+
+.services-section .section-heading,
+.services-section .service-grid {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+.service-card {
+    background: white;
+    padding: 35px;
+
+    border: 1px solid #dce6f2;
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(20, 70, 120, 0.10);
+}
+
+
+.service-number {
+    color: #0b63ce;
+    font-weight: 800;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+
+.service-card h2,
+.service-card h3 {
+    color: #102a43;
+    margin-bottom: 12px;
+}
+
+
+.service-card p {
+    color: #65758b;
+    margin-bottom: 20px;
+}
+
+
+.service-card a {
+    color: #0b63ce;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   CTA
+   ========================================= */
+
+.cta {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 55px;
+
+    background: #0b3d91;
+    color: white;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+.cta h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+
+.cta p {
+    color: #dceaff;
+}
+
+
+.cta .primary-button {
+    background: white;
+    color: #0b3d91;
+}
+
+
+/* =========================================
+   PAGE HERO
+   ========================================= */
+
+.page-hero {
+    text-align: center;
+
+    padding: 100px 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eaf3ff,
+            #ffffff
+        );
+}
+
+
+.page-hero h1 {
+    font-size: 52px;
+    color: #102a43;
+    margin-bottom: 10px;
+}
+
+
+.page-hero p {
+    color: #65758b;
+}
+
+
+/* =========================================
+   ABOUT PAGE
+   ========================================= */
+
+.about-page {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 70px;
+}
+
+
+.about-page h2 {
+    font-size: 40px;
+    color: #102a43;
+    margin-bottom: 10px;
+}
+
+
+.about-page p {
+    margin-bottom: 20px;
+    color: #526579;
+}
+
+
+/* =========================================
+   VALUES
+   ========================================= */
+
+.values-section {
+    background: #eef5fc;
+    padding: 90px 25px;
+}
+
+
+.value-grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+
+.value-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #dce6f2;
+}
+
+
+.value-card h3 {
+    color: #0b3d91;
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   SERVICE DETAIL
+   ========================================= */
+
+.service-detail {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 0 25px;
+}
+
+
+.service-detail h2 {
+    color: #102a43;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+
+.service-detail p {
+    color: #526579;
+    margin-bottom: 25px;
+}
+
+
+.service-detail ul {
+    margin: 25px 0 35px;
+    padding-left: 25px;
+}
+
+
+.service-detail li {
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   CONTACT
+   ========================================= */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+
+.contact-card {
+    background: white;
+    padding: 35px;
+    border: 1px solid #dce6f2;
+    border-radius: 10px;
+}
+
+
+.contact-card h3 {
+    color: #0b63ce;
+    margin-bottom: 10px;
+}
+
+
+.contact-card a {
+    color: #0b63ce;
+    font-weight: 600;
+}
+
+
+.contact-action {
+    text-align: center;
+    margin-top: 60px;
+    padding: 50px;
+    background: #eef5fc;
+    border-radius: 12px;
+}
+
+
+.contact-action h2 {
+    color: #102a43;
+    margin-bottom: 10px;
+}
+
+
+.contact-action p {
+    color: #65758b;
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.footer {
+    background: #0d1f35;
+    color: white;
+    padding-top: 60px;
+}
+
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 25px 50px;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+}
+
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+.footer-column h3 {
+    margin-bottom: 10px;
+}
+
+
+.footer-column p {
+    color: #b9c7d8;
+}
+
+
+.footer-column a {
+    color: #b9c7d8;
+    text-decoration: none;
+}
+
+
+.footer-column a:hover {
+    color: white;
+}
+
+
+.copyright {
+    border-top: 1px solid #29405b;
+    text-align: center;
+    padding: 20px;
+    color: #9eb0c5;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .navigation {
+        gap: 15px;
+    }
+
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .value-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .about-preview,
+    .about-page {
+        grid-template-columns: 1fr;
+    }
+
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+
+    .navigation {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+
+    .hero {
+        min-height: 550px;
+        padding: 60px 25px;
+    }
+
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+
+    .service-grid,
+    .value-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .about-preview {
+        padding: 30px;
+    }
+
+
+    .cta {
+        margin: 50px 20px;
+        padding: 35px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+    .page-hero h1 {
+        font-size: 40px;
+    }
+
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+}
