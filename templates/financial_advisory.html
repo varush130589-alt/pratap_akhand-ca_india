@@ -7,61 +7,181 @@ Financial Advisory | CA INDIA
 
 {% block content %}
 
-<section class="page-hero">
 
-    <p class="section-label">
-        OUR SERVICE
-    </p>
+<section class="page-intro">
 
-    <h1>
-        Financial Advisory
-    </h1>
+    <div class="page-intro-box">
 
-    <p>
-        Practical financial guidance for
-        better decision-making.
-    </p>
+        <span class="section-label">
+            FINANCIAL ADVISORY
+        </span>
+
+        <h1>
+            Financial Advisory
+        </h1>
+
+        <p>
+            Financial guidance supporting informed decision-making
+            based on relevant information.
+        </p>
+
+    </div>
 
 </section>
 
 
-<section class="service-detail">
+<section class="content-section">
 
-    <h2>
-        Financial Guidance for Better Decisions
-    </h2>
+    <div class="content-box">
 
-    <p>
-
-        Financial decisions can have a significant
-        impact on individuals and businesses.
-        Our advisory approach focuses on understanding
-        financial requirements and providing practical
-        professional guidance.
-
-    </p>
+        <a href="{{ url_for('services') }}"
+           class="back-button">
+            ← Back to Services
+        </a>
 
 
-    <ul>
+        <div class="detail-box">
 
-        <li>Financial Planning Assistance</li>
-        <li>Business Financial Guidance</li>
-        <li>Financial Analysis</li>
-        <li>Decision-Making Support</li>
+            <h2>
+                Service Overview
+            </h2>
 
-    </ul>
+            <p>
+                Financial decisions should consider relevant
+                information, objectives, risks and applicable
+                requirements.
+            </p>
+
+        </div>
 
 
-    <!--
-    GOOGLE FORM LINK:
-    Replace the "#" below with your Google Form URL
-    for Financial Advisory enquiries.
-    -->
+        <div class="detail-box">
 
-    <a href="#"
-       class="primary-button">
-        Request Financial Consultation
-    </a>
+            <h3>
+                Financial Analysis
+            </h3>
+
+            <p>
+                Financial information may be reviewed and
+                analyzed according to the requirements of the
+                engagement.
+            </p>
+
+        </div>
+
+
+        <div class="detail-box">
+
+            <h3>
+                Planning Support
+            </h3>
+
+            <p>
+                Professional assistance may support financial
+                planning and evaluation of relevant financial
+                information.
+            </p>
+
+        </div>
+
+
+        <div class="detail-box">
+
+            <h3>
+                Important Note
+            </h3>
+
+            <p>
+                Financial advisory services depend on the
+                specific circumstances and requirements of the
+                engagement.
+            </p>
+
+        </div>
+
+
+        <div class="enquiry-box service-enquiry">
+
+            <span class="section-label">
+                ADVISORY ENQUIRY
+            </span>
+
+            <h2>
+                Enquire about financial advisory services.
+            </h2>
+
+
+            <form action="{{ url_for('submit_enquiry') }}"
+                  method="POST"
+                  class="enquiry-form">
+
+                <input type="hidden"
+                       name="service"
+                       value="Financial Advisory">
+
+
+                <div class="form-group">
+
+                    <label>
+                        Full Name <span>*</span>
+                    </label>
+
+                    <input type="text"
+                           name="name"
+                           required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Email Address <span>*</span>
+                    </label>
+
+                    <input type="email"
+                           name="email"
+                           required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Phone Number
+                    </label>
+
+                    <input type="tel"
+                           name="phone">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Requirement <span>*</span>
+                    </label>
+
+                    <textarea name="message"
+                              required></textarea>
+
+                </div>
+
+
+                <button type="submit"
+                        class="blue-button form-submit">
+
+                    Submit Enquiry
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
 
 </section>
 

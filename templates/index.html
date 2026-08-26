@@ -1,4 +1,3 @@
-```html
 {% extends "base.html" %}
 
 {% block title %}
@@ -8,42 +7,502 @@ CA INDIA | Pratap Akhand and Associates
 
 {% block content %}
 
-<!-- =========================================
-     HERO SECTION
-     ========================================= -->
 
-<section class="hero">
+<!-- ============================================================
+     INTRODUCTION
+     ============================================================ -->
 
-    <div class="hero-content">
+<section class="hero-section">
 
-        <p class="hero-small">
-            PROFESSIONAL CHARTERED ACCOUNTANCY SERVICES
+    <div class="hero-container">
+
+        <div class="hero-box">
+
+            <span class="section-label">
+                CHARTERED ACCOUNTANTS
+            </span>
+
+            <h1>
+                Professional financial guidance
+                built on trust and clarity.
+            </h1>
+
+            <p>
+                CA INDIA | Pratap Akhand and Associates provides
+                professional services in taxation, accounting,
+                audit and financial advisory with an emphasis
+                on accuracy, confidentiality and responsible
+                professional service.
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a href="{{ url_for('services') }}"
+                   class="blue-button">
+
+                    Explore Our Services
+
+                </a>
+
+
+                <a href="#enquiry"
+                   class="outline-button">
+
+                    Make an Enquiry
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ============================================================
+     ABOUT / TRUST
+     ============================================================ -->
+
+<section class="content-section">
+
+    <div class="content-box">
+
+        <span class="section-label">
+            OUR APPROACH
+        </span>
+
+        <h2>
+            Professional service with a clear approach.
+        </h2>
+
+        <p>
+            Financial and taxation matters require careful
+            consideration of applicable laws, regulations and
+            individual circumstances. Our approach focuses on
+            understanding requirements, maintaining appropriate
+            documentation and providing professional assistance
+            according to the nature of each engagement.
         </p>
 
-        <h1>
-            Trusted Financial Guidance.
-            <span>Professional Excellence.</span>
-        </h1>
+    </div>
 
-        <p class="hero-description">
+</section>
 
-            Welcome to CA INDIA – Pratap Akhand and Associates,
-            providing professional accounting, taxation, auditing,
-            GST and financial advisory services with a focus on
-            accuracy, transparency and long-term client relationships.
 
-        </p>
+<!-- ============================================================
+     SERVICES
+     ============================================================ -->
 
-        <div class="hero-buttons">
+<section class="content-section">
 
-            <a href="{{ url_for('services') }}"
-               class="primary-button">
-                Explore Our Services
+    <div class="content-box">
+
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                OUR SERVICES
+            </span>
+
+            <h2>
+                Professional services for individuals
+                and businesses.
+            </h2>
+
+            <p>
+                Explore our principal areas of professional
+                service and select a service to learn more.
+            </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+
+            <a href="{{ url_for('income_tax') }}"
+               class="service-card">
+
+                <h3>
+                    Income Tax
+                </h3>
+
+                <p>
+                    Assistance with applicable income-tax
+                    compliance and related professional
+                    requirements.
+                </p>
+
+                <span class="card-button">
+                    View Service
+                </span>
+
             </a>
+
+
+            <a href="{{ url_for('gst') }}"
+               class="service-card">
+
+                <h3>
+                    GST
+                </h3>
+
+                <p>
+                    Professional assistance relating to GST
+                    compliance and applicable requirements.
+                </p>
+
+                <span class="card-button">
+                    View Service
+                </span>
+
+            </a>
+
+
+            <a href="{{ url_for('accounting') }}"
+               class="service-card">
+
+                <h3>
+                    Accounting & Bookkeeping
+                </h3>
+
+                <p>
+                    Organized accounting support for maintaining
+                    useful and reliable financial records.
+                </p>
+
+                <span class="card-button">
+                    View Service
+                </span>
+
+            </a>
+
+
+            <a href="{{ url_for('audit') }}"
+               class="service-card">
+
+                <h3>
+                    Audit & Assurance
+                </h3>
+
+                <p>
+                    Professional audit and assurance services
+                    according to applicable requirements.
+                </p>
+
+                <span class="card-button">
+                    View Service
+                </span>
+
+            </a>
+
+
+            <a href="{{ url_for('financial_advisory') }}"
+               class="service-card">
+
+                <h3>
+                    Financial Advisory
+                </h3>
+
+                <p>
+                    Financial guidance supporting informed
+                    decision-making and planning.
+                </p>
+
+                <span class="card-button">
+                    View Service
+                </span>
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ============================================================
+     UPDATES / NOTICES
+     ============================================================ -->
+
+<section class="content-section"
+         id="updates">
+
+    <div class="content-box updates-box">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                UPDATES & NOTICES
+            </span>
+
+            <h2>
+                Important information
+            </h2>
+
+            <p>
+                General information relating to taxation,
+                compliance and financial matters.
+            </p>
+
+        </div>
+
+
+        <div class="updates-slider">
+
+
+            <article class="update-slide active">
+
+                <span class="update-count">
+                    01 / 08
+                </span>
+
+                <h3>
+                    Income Tax Compliance
+                </h3>
+
+                <p>
+                    Taxpayers should remain aware of applicable
+                    filing requirements and prescribed timelines.
+                </p>
+
+            </article>
+
+
+            <article class="update-slide">
+
+                <span class="update-count">
+                    02 / 08
+                </span>
+
+                <h3>
+                    GST Compliance
+                </h3>
+
+                <p>
+                    Businesses should maintain appropriate GST
+                    records and complete applicable compliance
+                    requirements within prescribed timelines.
+                </p>
+
+            </article>
+
+
+            <article class="update-slide">
+
+                <span class="update-count">
+                    03 / 08
+                </span>
+
+                <h3>
+                    Financial Records
+                </h3>
+
+                <p>
+                    Properly maintained financial records can
+                    support compliance and informed financial
+                    decision-making.
+                </p>
+
+            </article>
+
+
+            <article class="update-slide">
+
+                <span class="update-count">
+                    04 / 08
+                </span>
+
+                <h3>
+                    Audit Preparation
+                </h3>
+
+                <p>
+                    Relevant documents and records should be
+                    organized appropriately for applicable
+                    audit engagements.
+                </p>
+
+            </article>
+
+
+            <article class="update-slide">
+
+                <span class="update-count">
+                    05 / 08
+                </span>
+
+                <h3>
+                    Regulatory Changes
+                </h3>
+
+                <p>
+                    Changes in laws and regulations may affect
+                    taxpayers and businesses differently.
+                </p>
+
+            </article>
+
+
+            <article class="update-slide">
+
+                <span class="update-count">
+                    06 / 08
+                </span>
+
+                <h3>
+                    Business Compliance
+                </h3>
+
+                <p>
+                    Businesses should periodically review their
+                    applicable statutory and regulatory
+                    responsibilities.
+                </p>
+
+            </article>
+
+
+            <article class="update-slide">
+
+                <span class="update-count">
+                    07 / 08
+                </span>
+
+                <h3>
+                    Professional Advice
+                </h3>
+
+                <p>
+                    Professional advice should always consider
+                    the specific facts and circumstances of the
+                    relevant matter.
+                </p>
+
+            </article>
+
+
+            <article class="update-slide">
+
+                <span class="update-count">
+                    08 / 08
+                </span>
+
+                <h3>
+                    General Information Notice
+                </h3>
+
+                <p>
+                    Information displayed on this website is
+                    general in nature and should not be treated
+                    as specific professional advice.
+                </p>
+
+            </article>
+
+
+        </div>
+
+
+        <div class="slider-controls">
+
+            <button type="button"
+                    onclick="changeSlide(-1)">
+                Previous
+            </button>
+
+
+            <div class="slider-dots">
+
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+
+            </div>
+
+
+            <button type="button"
+                    onclick="changeSlide(1)">
+                Next
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ============================================================
+     CONTACT
+     ============================================================ -->
+
+<section class="content-section"
+         id="contact">
+
+    <div class="content-box">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                CONTACT US
+            </span>
+
+            <h2>
+                We are available for professional enquiries.
+            </h2>
+
+            <p>
+                Contact us using the information below for
+                enquiries relating to our professional services.
+            </p>
+
+        </div>
+
+
+        <div class="contact-card">
+
+            <div>
+
+                <h3>
+                    Email
+                </h3>
+
+                <a href="mailto:ca.akhandpratap1@gmail.com">
+                    ca.akhandpratap1@gmail.com
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Location
+                </h3>
+
+                <p>
+                    Ghazipur, Uttar Pradesh
+                </p>
+
+            </div>
+
 
             <a href="{{ url_for('contact') }}"
-               class="secondary-button">
-                Contact Us
+               class="blue-button">
+
+                Contact Details
+
             </a>
 
         </div>
@@ -53,355 +512,260 @@ CA INDIA | Pratap Akhand and Associates
 </section>
 
 
-<!-- =========================================
-     PROFESSIONAL INTRODUCTION
-     ========================================= -->
+<!-- ============================================================
+     ENQUIRY FORM
+     ============================================================ -->
 
-<section class="section">
+<section class="content-section"
+         id="enquiry">
 
-    <div class="section-heading">
+    <div class="content-box enquiry-box">
 
-        <p class="section-label">
-            ABOUT THE FIRM
-        </p>
 
-        <h2>
-            Professional Support for Your
-            Financial Journey
-        </h2>
+        <div class="section-heading">
 
-    </div>
-
-
-    <div class="about-preview">
-
-        <div>
-
-            <h3>
-                CA Akhand Pratap Maurya
-            </h3>
-
-            <p class="qualification">
-                B.Com, ACA
-            </p>
-
-        </div>
-
-
-        <div>
-
-            <p>
-
-                CA Akhand Pratap Maurya is a qualified
-                Chartered Accountant committed to providing
-                reliable and professional financial services
-                to individuals, businesses and organizations.
-
-                With an approach centered around accuracy,
-                confidentiality, transparency and practical
-                financial guidance, the firm aims to help
-                clients manage their accounting, taxation,
-                compliance and financial requirements with
-                greater confidence.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================
-     SERVICES PREVIEW
-     ========================================= -->
-
-<section class="section services-section">
-
-    <div class="section-heading">
-
-        <p class="section-label">
-            OUR SERVICES
-        </p>
-
-        <h2>
-            Professional Services Designed
-            Around Your Needs
-        </h2>
-
-        <p>
-            Explore our range of accounting, taxation,
-            compliance and financial advisory services.
-        </p>
-
-    </div>
-
-
-    <div class="service-grid">
-
-
-        <div class="service-card">
-
-            <div class="service-number">
-                01
-            </div>
-
-            <h3>
-                Income Tax
-            </h3>
-
-            <p>
-                Income tax return preparation,
-                tax planning and related assistance.
-            </p>
-
-            <a href="{{ url_for('income_tax') }}">
-                Learn More →
-            </a>
-
-        </div>
-
-
-        <div class="service-card">
-
-            <div class="service-number">
-                02
-            </div>
-
-            <h3>
-                GST Services
-            </h3>
-
-            <p>
-                GST registration, returns and
-                compliance support.
-            </p>
-
-            <a href="{{ url_for('gst') }}">
-                Learn More →
-            </a>
-
-        </div>
-
-
-        <div class="service-card">
-
-            <div class="service-number">
-                03
-            </div>
-
-            <h3>
-                Accounting
-            </h3>
-
-            <p>
-                Professional accounting and
-                financial record management.
-            </p>
-
-            <a href="{{ url_for('accounting') }}">
-                Learn More →
-            </a>
-
-        </div>
-
-
-        <div class="service-card">
-
-            <div class="service-number">
-                04
-            </div>
-
-            <h3>
-                Audit
-            </h3>
-
-            <p>
-                Professional audit and
-                financial examination services.
-            </p>
-
-            <a href="{{ url_for('audit') }}">
-                Learn More →
-            </a>
-
-        </div>
-
-
-        <div class="service-card">
-
-            <div class="service-number">
-                05
-            </div>
-
-            <h3>
-                Financial Advisory
-            </h3>
-
-            <p>
-                Practical financial guidance
-                for better decision making.
-            </p>
-
-            <a href="{{ url_for('financial_advisory') }}">
-                Learn More →
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================
-     LATEST NEWS
-     ========================================= -->
-
-<section class="section news-section">
-
-    <div class="section-heading">
-
-        <p class="section-label">
-            LATEST NEWS
-        </p>
-
-        <h2>
-            Important Updates &amp; Notices
-        </h2>
-
-        <p>
-            Stay informed about important tax,
-            GST, compliance and financial updates.
-        </p>
-
-    </div>
-
-
-    <div class="news-grid">
-
-
-        <!-- NEWS CARD 1 -->
-
-        <article class="news-card">
-
-            <span class="news-category">
-                TAX UPDATE
+            <span class="section-label">
+                ENQUIRY
             </span>
 
-            <h3>
-                Important Income Tax Updates
-            </h3>
-
-            <p class="news-date">
-                25 August 2026
-            </p>
+            <h2>
+                Tell us how we can assist you.
+            </h2>
 
             <p>
-                Stay informed about important income
-                tax announcements, deadlines and
-                compliance requirements.
+                Submit the form below with your basic requirements.
             </p>
 
-            <a href="#"
-               class="news-link">
-                Read More →
-            </a>
-
-        </article>
+        </div>
 
 
-        <!-- NEWS CARD 2 -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
 
-        <article class="news-card">
+            {% if messages %}
 
-            <span class="news-category">
-                GST UPDATE
-            </span>
+                <div class="flash-container">
 
-            <h3>
-                Latest GST Compliance Updates
-            </h3>
+                    {% for category, message in messages %}
 
-            <p class="news-date">
-                25 August 2026
+                        <div class="flash-message {{ category }}">
+                            {{ message }}
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+
+            {% endif %}
+
+        {% endwith %}
+
+
+        <form action="{{ url_for('submit_enquiry') }}"
+              method="POST"
+              class="enquiry-form">
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Full Name
+                        <span>*</span>
+                    </label>
+
+                    <input type="text"
+                           id="name"
+                           name="name"
+                           placeholder="Enter your full name"
+                           required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                        <span>*</span>
+                    </label>
+
+                    <input type="email"
+                           id="email"
+                           name="email"
+                           placeholder="Enter your email address"
+                           required>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input type="tel"
+                           id="phone"
+                           name="phone"
+                           placeholder="Enter your phone number">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="service">
+                        Service Required
+                        <span>*</span>
+                    </label>
+
+                    <select id="service"
+                            name="service"
+                            required>
+
+                        <option value="">
+                            Select a service
+                        </option>
+
+                        <option value="Income Tax">
+                            Income Tax
+                        </option>
+
+                        <option value="GST">
+                            GST
+                        </option>
+
+                        <option value="Accounting & Bookkeeping">
+                            Accounting & Bookkeeping
+                        </option>
+
+                        <option value="Audit & Assurance">
+                            Audit & Assurance
+                        </option>
+
+                        <option value="Financial Advisory">
+                            Financial Advisory
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="message">
+                    Your Requirement
+                    <span>*</span>
+                </label>
+
+                <textarea id="message"
+                          name="message"
+                          placeholder="Briefly describe your requirement"
+                          required></textarea>
+
+            </div>
+
+
+            <button type="submit"
+                    class="blue-button form-submit">
+
+                Submit Enquiry
+
+            </button>
+
+
+            <p class="form-note">
+
+                Please avoid sharing confidential documents or
+                sensitive information through this form.
+
             </p>
 
-            <p>
-                Important GST-related notifications,
-                filing information and compliance
-                updates for taxpayers.
-            </p>
 
-            <a href="#"
-               class="news-link">
-                Read More →
-            </a>
-
-        </article>
-
-
-        <!-- NEWS CARD 3 -->
-
-        <article class="news-card">
-
-            <span class="news-category">
-                BUSINESS
-            </span>
-
-            <h3>
-                Financial &amp; Business Updates
-            </h3>
-
-            <p class="news-date">
-                25 August 2026
-            </p>
-
-            <p>
-                Keep up with important financial,
-                accounting and business-related
-                developments.
-            </p>
-
-            <a href="#"
-               class="news-link">
-                Read More →
-            </a>
-
-        </article>
-
+        </form>
 
     </div>
 
 </section>
 
 
-<!-- =========================================
-     CALL TO ACTION
-     ========================================= -->
+<!-- ============================================================
+     SLIDESHOW
+     ============================================================ -->
 
-<section class="cta">
+<script>
 
-    <div>
+let currentSlide = 0;
 
-        <h2>
-            Let's Discuss Your Financial Needs
-        </h2>
+const slides =
+    document.querySelectorAll(".update-slide");
 
-        <p>
-            Get in touch with CA INDIA for
-            professional assistance.
-        </p>
+const dots =
+    document.querySelectorAll(".dot");
 
-    </div>
 
-    <a href="{{ url_for('contact') }}"
-       class="primary-button">
-        Get in Touch
-    </a>
+function showSlide(index) {
 
-</section>
+    if (index >= slides.length) {
+        currentSlide = 0;
+    }
+
+    else if (index < 0) {
+        currentSlide = slides.length - 1;
+    }
+
+    else {
+        currentSlide = index;
+    }
+
+
+    slides.forEach(function(slide) {
+
+        slide.classList.remove("active");
+
+    });
+
+
+    dots.forEach(function(dot) {
+
+        dot.classList.remove("active");
+
+    });
+
+
+    slides[currentSlide].classList.add("active");
+
+    dots[currentSlide].classList.add("active");
+
+}
+
+
+function changeSlide(direction) {
+
+    showSlide(currentSlide + direction);
+
+}
+
+
+setInterval(function() {
+
+    changeSlide(1);
+
+}, 3000);
+
+</script>
+
 
 {% endblock %}
-```

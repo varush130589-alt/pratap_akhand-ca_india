@@ -1,67 +1,187 @@
 {% extends "base.html" %}
 
 {% block title %}
-Accounting Services | CA INDIA
+Accounting & Bookkeeping | CA INDIA
 {% endblock %}
 
 
 {% block content %}
 
-<section class="page-hero">
 
-    <p class="section-label">
-        OUR SERVICE
-    </p>
+<section class="page-intro">
 
-    <h1>
-        Accounting Services
-    </h1>
+    <div class="page-intro-box">
 
-    <p>
-        Organized and professional accounting
-        support for businesses.
-    </p>
+        <span class="section-label">
+            ACCOUNTING
+        </span>
+
+        <h1>
+            Accounting & Bookkeeping
+        </h1>
+
+        <p>
+            Organized accounting support for maintaining
+            useful financial records.
+        </p>
+
+    </div>
 
 </section>
 
 
-<section class="service-detail">
+<section class="content-section">
 
-    <h2>
-        Professional Accounting Support
-    </h2>
+    <div class="content-box">
 
-    <p>
-
-        Accurate financial records are essential for
-        understanding the financial position of a business.
-        Our accounting services focus on maintaining
-        organized financial information and supporting
-        informed decision-making.
-
-    </p>
+        <a href="{{ url_for('services') }}"
+           class="back-button">
+            ← Back to Services
+        </a>
 
 
-    <ul>
+        <div class="detail-box">
 
-        <li>Bookkeeping Assistance</li>
-        <li>Financial Record Management</li>
-        <li>Accounting Support</li>
-        <li>Financial Statement Assistance</li>
+            <h2>
+                Service Overview
+            </h2>
 
-    </ul>
+            <p>
+                Accurate accounting records provide an
+                important foundation for understanding financial
+                activity and supporting compliance.
+            </p>
+
+        </div>
 
 
-    <!--
-    GOOGLE FORM LINK:
-    Replace the "#" below with your Google Form URL
-    for Accounting service enquiries.
-    -->
+        <div class="detail-box">
 
-    <a href="#"
-       class="primary-button">
-        Request Accounting Assistance
-    </a>
+            <h3>
+                Bookkeeping
+            </h3>
+
+            <p>
+                Services may include recording and organizing
+                relevant financial transactions and maintaining
+                appropriate accounting records.
+            </p>
+
+        </div>
+
+
+        <div class="detail-box">
+
+            <h3>
+                Financial Information
+            </h3>
+
+            <p>
+                Properly organized accounting information can
+                assist businesses in reviewing their financial
+                position and activity.
+            </p>
+
+        </div>
+
+
+        <div class="detail-box">
+
+            <h3>
+                Important Note
+            </h3>
+
+            <p>
+                The nature and scope of accounting services are
+                determined according to the requirements of the
+                individual engagement.
+            </p>
+
+        </div>
+
+
+        <div class="enquiry-box service-enquiry">
+
+            <span class="section-label">
+                ACCOUNTING ENQUIRY
+            </span>
+
+            <h2>
+                Enquire about accounting services.
+            </h2>
+
+
+            <form action="{{ url_for('submit_enquiry') }}"
+                  method="POST"
+                  class="enquiry-form">
+
+                <input type="hidden"
+                       name="service"
+                       value="Accounting & Bookkeeping">
+
+
+                <div class="form-group">
+
+                    <label>
+                        Full Name <span>*</span>
+                    </label>
+
+                    <input type="text"
+                           name="name"
+                           required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Email Address <span>*</span>
+                    </label>
+
+                    <input type="email"
+                           name="email"
+                           required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Phone Number
+                    </label>
+
+                    <input type="tel"
+                           name="phone">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Requirement <span>*</span>
+                    </label>
+
+                    <textarea name="message"
+                              required></textarea>
+
+                </div>
+
+
+                <button type="submit"
+                        class="blue-button form-submit">
+
+                    Submit Enquiry
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
 
 </section>
 
