@@ -1,9 +1,37 @@
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import (
+    Flask,
+    render_template,
+    request,
+    redirect,
+    url_for,
+    flash
+)
+
+import requests
+
+
+# ============================================================
+# APPLICATION
+# ============================================================
 
 app = Flask(__name__)
 
-# Used for Flask flash messages
+
+# ============================================================
+# SECRET KEY
+# ============================================================
+
 app.secret_key = "ca-india-website-secret-key"
+
+
+# ============================================================
+# ADMIN DASHBOARD API
+# ============================================================
+
+ADMIN_API_URL = (
+    "https://pratap-akhand-ca-india-admin.onrender.com"
+    "/api/enquiries"
+)
 
 
 # ============================================================
@@ -12,7 +40,10 @@ app.secret_key = "ca-india-website-secret-key"
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+
+    return render_template(
+        "index.html"
+    )
 
 
 # ============================================================
@@ -21,7 +52,10 @@ def home():
 
 @app.route("/about")
 def about():
-    return render_template("about.html")
+
+    return render_template(
+        "about.html"
+    )
 
 
 # ============================================================
@@ -30,7 +64,10 @@ def about():
 
 @app.route("/services")
 def services():
-    return render_template("services.html")
+
+    return render_template(
+        "services.html"
+    )
 
 
 # ============================================================
@@ -39,27 +76,42 @@ def services():
 
 @app.route("/services/income-tax")
 def income_tax():
-    return render_template("income_tax.html")
+
+    return render_template(
+        "income_tax.html"
+    )
 
 
 @app.route("/services/gst")
 def gst():
-    return render_template("gst.html")
+
+    return render_template(
+        "gst.html"
+    )
 
 
 @app.route("/services/accounting")
 def accounting():
-    return render_template("accounting.html")
+
+    return render_template(
+        "accounting.html"
+    )
 
 
 @app.route("/services/audit")
 def audit():
-    return render_template("audit.html")
+
+    return render_template(
+        "audit.html"
+    )
 
 
 @app.route("/services/financial-advisory")
 def financial_advisory():
-    return render_template("financial_advisory.html")
+
+    return render_template(
+        "financial_advisory.html"
+    )
 
 
 # ============================================================
@@ -68,49 +120,213 @@ def financial_advisory():
 
 @app.route("/contact")
 def contact():
-    return render_template("contact.html")
+
+    return render_template(
+        "contact.html"
+    )
 
 
 # ============================================================
 # ENQUIRY FORM
 # ============================================================
 
-@app.route("/submit-enquiry", methods=["POST"])
+@app.route(
+    "/submit-enquiry",
+    methods=["POST"]
+)
 def submit_enquiry():
 
-    name = request.form.get("name", "").strip()
-    email = request.form.get("email", "").strip()
-    phone = request.form.get("phone", "").strip()
-    service = request.form.get("service", "").strip()
-    message = request.form.get("message", "").strip()
+    # --------------------------------------------------------
+    # GET FORM DATA
+    # --------------------------------------------------------
 
-    if not name or not email or not service or not message:
+    name = request.form.get(
+        "name",
+        ""
+    ).strip()
+
+    email = request.form.get(
+        "email",
+        ""
+    ).strip()
+
+    phone = request.form.get(
+        "phone",
+        ""
+    ).strip()
+
+    service = request.form.get(
+        "service",
+        ""
+    ).strip()
+
+    message = request.form.get(
+        "message",
+        ""
+    ).strip()
+
+
+    # --------------------------------------------------------
+    # VALIDATION
+    # --------------------------------------------------------
+
+    if not name:
+
         flash(
-            "Please complete all required fields before submitting.",
+            "Name is required.",
             "error"
         )
 
         return redirect(
-            request.referrer or url_for("home")
+            request.referrer or url_for("contact")
         )
 
+
+    if not email:
+
+        flash(
+            "Email is required.",
+            "error"
+        )
+
+        return redirect(
+            request.referrer or url_for("contact")
+        )
+
+
+    if not service:
+
+        flash(
+            "Please select a service.",
+            "error"
+        )
+
+        return redirect(
+            request.referrer or url_for("contact")
+        )
+
+
+    if not message:
+
+        flash(
+            "Message is required.",
+            "error"
+        )
+
+        return redirect(
+            request.referrer or url_for("contact")
+        )
+
+
     # --------------------------------------------------------
-    # TEMPORARY HANDLING
-    # --------------------------------------------------------
-    # The form is currently connected to Flask and validates
-    # submitted information.
-    #
-    # Permanent database/email integration can be connected
-    # separately when the enquiry database is implemented.
+    # PREPARE ENQUIRY DATA
     # --------------------------------------------------------
 
+    enquiry_data = {
+
+        "name": name,
+
+        "email": email,
+
+        "phone": phone,
+
+        "service": service,
+
+        "message": message
+
+    }
+
+
+    # --------------------------------------------------------
+    # SEND TO ADMIN DASHBOARD
+    # --------------------------------------------------------
+
+    try:
+
+        response = requests.post(
+
+            ADMIN_API_URL,
+
+            json=enquiry_data,
+
+            timeout=15
+
+        )
+
+
+    except requests.exceptions.RequestException as error:
+
+        print(
+            "ADMIN API CONNECTION ERROR:",
+            error
+        )
+
+        flash(
+            "We could not submit your enquiry right now. "
+            "Please try again later.",
+            "error"
+        )
+
+        return redirect(
+            request.referrer or url_for("contact")
+        )
+
+
+    # --------------------------------------------------------
+    # READ API RESPONSE
+    # --------------------------------------------------------
+
+    try:
+
+        result = response.json()
+
+    except ValueError:
+
+        result = {}
+
+
+    # --------------------------------------------------------
+    # SUCCESS
+    # --------------------------------------------------------
+
+    if (
+        response.status_code == 201
+        and result.get("success") is True
+    ):
+
+        print(
+            "ENQUIRY SUBMITTED:",
+            result
+        )
+
+        flash(
+            "Thank you. Your enquiry has been received.",
+            "success"
+        )
+
+        return redirect(
+            request.referrer or url_for("contact")
+        )
+
+
+    # --------------------------------------------------------
+    # ADMIN API ERROR
+    # --------------------------------------------------------
+
+    print(
+        "ADMIN API ERROR:",
+        response.status_code,
+        result
+    )
+
     flash(
-        "Thank you. Your enquiry has been received.",
-        "success"
+        "We could not submit your enquiry right now. "
+        "Please try again later.",
+        "error"
     )
 
     return redirect(
-        request.referrer or url_for("home")
+        request.referrer or url_for("contact")
     )
 
 
@@ -119,4 +335,9 @@ def submit_enquiry():
 # ============================================================
 
 if __name__ == "__main__":
-    app.run(debug=True)
+
+    app.run(
+        host="0.0.0.0",
+        port=5000,
+        debug=True
+    )
